@@ -132,10 +132,14 @@ border: none;
 font-weight: bold;
 color: white;
 font-family: 'NovaSquare';
-
-
-
+transition:  0.5s ease;
 }
+
+.banner .boton:hover {
+ 
+    background-color: #0077ff; 
+    transition: 0.5s ease;
+    }
 
 
 #sobre-nosotros .col-md-6 img {
