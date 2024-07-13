@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fuentes/Roboto-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fuentes/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fuentes/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fuentes/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fuentes/Roboto-Black.ttf') format('truetype');
+    font-weight: 900; /* Black */
+}
+
+@font-face {
+    font-family: 'NovaSquare';
+    src: url('Fuentes/NovaSquare-Regular.ttf') format('truetype');
+    font-weight: 900; /* Black */
+}
+
+body {
+
+margin: 0%;
+font-family: 'Roboto';
+
+}
+
+
+.menu {
+    background-color: #000e4d;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0%;
+    gap: 30px; /* Esto agrega espacio entre los elementos del menú */
+    list-style: none;
+    font-family: 'Roboto';
+    justify-content: center;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+
+}
+
+.menu a {
+    padding: 10px; /* Esto aumenta el espacio alrededor del contenido dentro de cada elemento del menú */
+    text-decoration: none; /* Opcional: elimina el subrayado de los enlaces */
+    color: white; /* Opcional: cambia el color del texto de los enlaces */
+    text-transform: uppercase;
+    font-size: 25px;
+    
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #2600ff;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 20px;
+    background-color: #0077ff;
+    position: fixed;
+    
+}
+
+.banner {
+    background-image: url('images/programador.jpg'); /* Reemplaza 'banner-image.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ajusta la altura según necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Ajusta el color del texto según tu diseño */
+    text-align: center;
+    padding: 20px;
+}
+
+.banner h1 {
+    font-size: 8rem; /* Ajusta el tamaño del texto según necesites */
+    margin-bottom: 20px;
+    font-family: 'NovaSquare'; /* Ajusta la fuente según necesites */
+    background-color: #000e4d;
+    padding: 5px 40px;
+    border-radius: 10px  30px;
+    
+}
+
+.banner p {
+    font-size: 2rem; /* Ajusta el tamaño del texto según necesites */
+    background-color: #000e4d;
+    font-family: 'NovaSquare'; /* Ajusta la fuente según necesites */
+    border-radius: 5px;
+    padding: 5px 30px;
+}
+
+.banner .boton {
+
+padding: 20px 70px;
+font-size: 20px;
+background-color: #000e4d;
+border-radius: 3px;
+outline: none;
+border: none;
+font-weight: bold;
+color: white;
+font-family: 'NovaSquare';
+
+
+
+}
+
+
+#sobre-nosotros .col-md-6 img {
+    border-radius: 20px; /* Ajusta este valor según la redondez deseada */
+}
+
+#sobre-nosotros .container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px 20px; /* Relleno reducido */
+}
+
+.menu, .menu-icon {
+    z-index: 1000; /* Un valor alto para asegurar que esté sobre otros contenidos */
+}
+
+
+
+
+/* Estilos para el botón del menú */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .menu {
+        visibility: hidden; /* Usamos visibility en lugar de display */
+        width: auto;
+        background-color: #0077ff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        margin: 0;
+        opacity: 0;
+        transform: translateY(-100%);
+        display: flex; /* Corregido para usar flex */
+        flex-direction: column; /* Alineamos los elementos en columna */
+        align-items: flex-start; /* Alineamos los elementos a la derecha */
+        padding: 15px; /* Eliminamos el padding por defecto */
+        gap: 0px; /* Eliminamos el espacio entre los elementos */
+        position: fixed;
+        margin-top: 40px;
+    }
+    
+    .menu.active {
+        visibility: visible; /* Hacemos el menú visible */
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease; /* No es necesario retrasar la visibilidad aquí */
+        width: 100%;
+    
+    }
+}
